@@ -15,7 +15,6 @@
     "modules-right": [
         "cpu",
         "memory",
-        "temperature",
         "wireplumber",
         "tray",
         "clock"
@@ -60,14 +59,6 @@
     // --- Memory ---
     "memory": {
         "format": "MEM: {used} GiB / {total} GiB",
-        "interval": 2,
-        "tooltip": true
-    },
-
-    // --- Temperature ---
-    "temperature": {
-        "format": "TEMP: {temperatureC}°C",
-        "critical-threshold": 75,
         "interval": 2,
         "tooltip": true
     },

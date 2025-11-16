@@ -55,7 +55,7 @@ window#waybar {
 }
 
 /* Системные модули справа */
-#cpu, #memory, #temperature, #network, #wireplumber, #clock, #tray {
+#cpu, #memory, #network, #wireplumber, #clock, #tray {
     padding: 0 6px;
     margin: 0 5px;
     color: white;
