@@ -20,7 +20,6 @@
         "clock"
     ],
 
-    // --- Workspaces ---
     "hyprland/workspaces": {
         "format": "{name}",
         "disable-scroll": false,
@@ -31,39 +30,25 @@
         "tooltip": true
     },
 
-    // --- Taskbar ---
-    "hyprland/windows": {
+    "hyprland/window": {
         "format": "{title}",
-        "max-length": 25,
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "on-scroll-up": "hyprctl dispatch focuswindow +1",
-        "on-scroll-down": "hyprctl dispatch focuswindow -1",
-        "tooltip": false
+        "max-length": 50,
+        "separate-outputs": true,
+        "tooltip": true
     },
 
-    // --- Active window title ---
-    "hyprland/window_title": {
-        "format": "{title}",
-        "max-length": 0,
-        "tooltip": false
-    },
-
-    // --- CPU ---
     "cpu": {
         "format": "CPU: {usage}%",
         "interval": 1,
         "tooltip": true
     },
 
-    // --- Memory ---
     "memory": {
         "format": "MEM: {used} GiB / {total} GiB",
         "interval": 2,
         "tooltip": true
     },
 
-    // --- Network ---
     "network": {
         "format-ethernet": "ETH: {ipaddr} ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "format-wifi": "WIFI: {ssid} ({strength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
@@ -72,7 +57,6 @@
         "interval": 2
     },
 
-    // --- Audio ---
     "wireplumber": {
         "format": "VOL: {volume}%",
         "format-muted": "MUTE",
@@ -81,13 +65,11 @@
         "tooltip": true
     },
 
-    // --- Tray ---
     "tray": {
         "icon-size": 16,
         "pin-icons": true
     },
 
-    // --- Clock ---
     "clock": {
         "format": "{:%I:%M:%S %p}",
         "tooltip-format": "{:%A, %B %d, %Y %I:%M:%S %p}",

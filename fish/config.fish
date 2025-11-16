@@ -14,15 +14,9 @@ if status --is-interactive
     pyenv virtualenv-init - | source
 end
 
-# ==== SSH_AGENT ====
-if not set -q SSH_AGENT_PID
-    eval (ssh-agent -c)
-end
-
-ssh-add -l > /dev/null 2>&1; or ssh-add ~/.ssh/id_rsa
-
 # ==== BTOP (sudo с кастомным конфигом) ====
 function sbtop
     sudo btop --config ~/.config/btop/btop.conf
 end
 alias sb="sbtop"
+
