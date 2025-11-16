@@ -3,6 +3,7 @@
 # ===================================
 
 set -g fish_greeting ""
+set -g EDITOR nvim
 
 # ==== PYENV ====
 set -Ux PYENV_ROOT $HOME/.pyenv
