@@ -1,8 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 28,
-    "spacing": 6,
+    "height": 22,
+    "spacing": 5,
 
     "modules-left": [
         "hyprland/workspaces"
@@ -16,6 +16,7 @@
         "cpu",
         "memory",
         "wireplumber",
+        "hyprland/language",
         "tray",
         "clock"
     ],
@@ -28,9 +29,16 @@
         "on-scroll-up": "hyprctl dispatch workspace +1",
         "on-scroll-down": "hyprctl dispatch workspace -1",
         "tooltip": true,
-        "show-all-workspaces": true,   // отображать все рабочие столы
-        "focused-background": "#88c0d0", // цвет фона для активного
-        "focused-foreground": "#ffffff"  // цвет текста для активного
+        "show-all-workspaces": true,
+        "focused-background": "#4fc1ff",
+        "focused-foreground": "#1d2021"
+    },
+
+    "hyprland/language": {
+        "format-en": "EN",
+        "format-ru": "RU",
+        "tooltip": false,
+        "interval": 1
     },
 
     "hyprland/window": {
@@ -42,22 +50,14 @@
 
     "cpu": {
         "format": "CPU: {usage}%",
-        "interval": 1,
-        "tooltip": true
+        "interval": 2,
+        "tooltip": false
     },
 
     "memory": {
         "format": "MEM: {used} GiB / {total} GiB",
-        "interval": 2,
-        "tooltip": true
-    },
-
-    "network": {
-        "format-ethernet": "ETH: {ipaddr} ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-        "format-wifi": "WIFI: {ssid} ({strength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-        "format-disconnected": "OFFLINE ⚠",
-        "tooltip-format": "Interface: {ifname}\nAddress: {ipaddr}\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
-        "interval": 2
+        "interval": 3,
+        "tooltip": false
     },
 
     "wireplumber": {
@@ -75,8 +75,7 @@
 
     "clock": {
         "format": "{:%d.%m.%Y %I:%M:%S %p}",
-        "tooltip-format": "{:%A, %d %B %Y %I:%M:%S %p}",
+        "tooltip-format": "{:%d.%m.%Y %I:%M:%S %p}",
         "interval": 1
     }
 }
-
