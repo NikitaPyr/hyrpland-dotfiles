@@ -1,99 +1,69 @@
-/* Базовые стили */
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "Noto Sans", monospace;
-    font-size: 16px;
-    min-height: 0;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 0;
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+  color: #ebdbb2;
+  padding: 0 6px;
+  margin: 0;
 }
 
-/* Окно Waybar */
 window#waybar {
-    background: rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid transparent;
-    color: white;
+  background: #1d2021;
+  padding: 2px 4px;
 }
 
-/* Кнопки рабочих пространств */
-#workspaces button {
-    padding: 0 6px;
-    margin: 0 3px;
-    color: white;
-    border-bottom: 2px solid transparent;
-    transition: background 0.2s, border-color 0.2s;
+#workspaces button label {
+  color: inherit;
+}
+#workspaces button.active label {
+  color: #1d2021;
+}
+#workspaces button:hover {
+  background: #3c3836;
+}
+#workspaces button.active {
+  background: linear-gradient(to right, rgba(79,193,255,0.8), rgba(79,193,255,0.8));
 }
 
-#workspaces button.focused {
-    background: rgba(136, 192, 208, 0.2);
-    border-bottom: 2px solid #88c0d0;
+#window label {
+  color: #ebdbb2;
 }
 
-/* Taskbar (список окон) */
-#window {
-    padding: 0 6px;
-    margin: 0 3px;
-    color: white;
-    background: transparent;
+#cpu, #memory, #network {
+  border-bottom: 3px solid;
+}
+#cpu {
+  color: #b8bb26;
+  border-color: #b8bb26;
+}
+#memory {
+  color: #fabd2f;
+  border-color: #fabd2f;
 }
 
-#window.active {
-    background: rgba(136, 192, 208, 0.2);
-    border-bottom: 2px solid #88c0d0;
+#wireplumber {
+  color: #689d6a;
+  border-bottom: 3px solid #689d6a;
+}
+#wireplumber.muted {
+  color: #cc241d;
+  border-color: #cc241d;
 }
 
-/* Активное окно (заголовок по центру) */
-#hyprland-window {
-    padding: 0 10px;
-    color: #ffffff;
-    font-weight: bold;
+#language {
+  color: #4fc1ff;
+  border-bottom: 3px solid #4fc1ff;
 }
 
-#hyprland-window.active {
-    background: rgba(136, 192, 208, 0.2);
-    border-bottom: 2px solid #88c0d0;
-}
-
-/* Системные модули справа */
-#cpu, #memory, #network, #wireplumber, #clock, #tray {
-    padding: 0 6px;
-    margin: 0 5px;
-    color: white;
-}
-
-/* Индикатор сети */
-#network {
-    transition: color 0.3s;
-}
-#network.online {
-    color: #a3be8c;
-}
-#network.disconnected {
-    color: #bf616a;
-}
-
-/* Часы */
-#clock {
-    color: #88c0d0;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(136, 192, 208, 0.4);
-}
-
-/* Трей */
 #tray {
-    background: transparent;
-    padding: 0 6px;
-    margin: 0 5px;
-    border-bottom: 2px solid transparent;
-    color: white;
+  color: #4fc1ff;
+  border-bottom: 3px solid #4fc1ff;
 }
 
-#tray .tray-item {
-    margin: 0 3px;
+#clock {
+  color: #b16286;
+  border-bottom: 3px solid #b16286;
 }
-
-#tray .tray-item:hover {
-    background: rgba(136, 192, 208, 0.2);
-    border-radius: 3px;
-}
-
