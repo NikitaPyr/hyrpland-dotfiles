@@ -29,9 +29,10 @@
         "on-scroll-up": "hyprctl dispatch workspace +1",
         "on-scroll-down": "hyprctl dispatch workspace -1",
         "tooltip": true,
-        "show-all-workspaces": true,
         "focused-background": "#4fc1ff",
-        "focused-foreground": "#1d2021"
+        "focused-foreground": "#1d2021",
+        "occupied-background": "#3c7ea3",
+        "occupied-foreground": "#ebdbb2"
     },
 
     "hyprland/language": {
@@ -79,3 +80,4 @@
         "interval": 1
     }
 }
+
