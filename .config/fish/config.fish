@@ -20,3 +20,8 @@ function showfiles
         cat $file
     end
 end
+
+function mirrorrank
+	sudo rate-mirrors --protocol=https --allow-root --entry-country=BY --disable-comments-in-file --save /etc/pacman.d/mirrorlist arch
+end
+
