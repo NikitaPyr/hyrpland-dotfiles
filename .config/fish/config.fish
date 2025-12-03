@@ -4,24 +4,18 @@ set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 
 if status --is-interactive
-    if type pyenv >/dev/null 2>&1
+    if type -q pyenv
         pyenv init - | source
         pyenv virtualenv-init - | source
     end
 end
 
-function sbtop
-    sudo btop --config ~/.config/btop/btop.conf
-end
+zoxide init fish | source
 
-function showfiles
-    find . -type f -not -path './.*/*' | while read file
-        echo "===== $file ====="
-        cat $file
-    end
-end
-
-function mirrorrank
-	sudo rate-mirrors --protocol=https --allow-root --entry-country=BY --disable-comments-in-file --save /etc/pacman.d/mirrorlist arch
-end
-
+alias ls="exa --icons --group-directories-first $argv"
+alias ll="exa -l --icons --group-directories-first $argv"
+alias la="exa -la --icons --group-directories-first $argv"
+alias grep="rg $argv"
+alias sbtop="sudo btop --config ~/.config/btop/btop.conf"
+alias mirrorrank="sudo rate-mirrors --protocol=https --allow-root --entry-country=BY --disable-comments-in-file --save /etc/pacman.d/mirrorlist arch"
+alias aboutme="fastfetch -c all -l none"
